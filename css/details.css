@@ -1,0 +1,97 @@
+#prodetails {
+    display: flex;
+    margin-top: 20px;
+}
+
+#prodetails .single-pro-image {
+    width: 40%;
+    margin-right: 50px;
+}
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col {
+    padding-top: 5px;
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#prodetails .single-pro-details {
+    width: 50%;
+    padding-top: 10px;
+}
+
+#prodetails .single-pro-details h4 {
+    padding: 10px 0 10px 0;
+}
+
+#prodetails .single-pro-details h2 {
+    font: 26px;
+}
+
+#prodetails .single-pro-details select {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#prodetails .single-pro-details input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+#prodetails .single-pro-details input:focus {
+    outline: none;
+}
+
+#prodetails .single-pro-details button {
+    cursor: pointer;
+    height: 3.125rem;
+    background-color: #0c234b;
+    color: #fff;
+    white-space: nowrap;
+    width: 30%;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#prodetails .single-pro-details button:hover {
+    background-color: #ffbd27;
+    color: #0c234b;
+    font-weight: 800;
+    transform: scale(1.05);
+}
+
+#prodetails .single-pro-details span {
+    line-height: 15px;
+}
+
+@media (max-width: 500px) {
+    #prodetails {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #prodetails .single-pro-image {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    #prodetails .single-pro-details {
+        width: 100%;
+        
+    }
+}
