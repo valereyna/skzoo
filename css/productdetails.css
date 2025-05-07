@@ -1,0 +1,153 @@
+#prodetails {
+    display: flex;
+    gap: 2rem;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+#prodetails .single-pro-image {
+    flex: 1 1 40%;
+    max-width: 500px;
+    position: relative;
+}
+
+#prodetails .single-pro-image img#MainImg {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.small-img-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 0.5rem;
+}
+
+.arrow {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    padding: 0 10px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.arrow:hover {
+    color: #ab0520;
+}
+
+.small-img-group {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+    flex: 1;
+}
+
+.small-img-group::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.small-img-col {
+    flex: 0 0 auto;
+    width: 80px;
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.small-img-col:hover {
+    transform: scale(1.05);
+}
+
+.small-img-col img.small-img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    display: block;
+}
+
+#prodetails .single-pro-details {
+    flex: 1 1 50%;
+    max-width: 600px;
+    padding-top: 10px;
+}
+
+#prodetails .single-pro-details h4 {
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+#prodetails .single-pro-details h2 {
+    font-size: 36px;
+    color: #ab0520;
+    margin: 10px 0;
+}
+
+#prodetails .single-pro-details select,
+#prodetails .single-pro-details input[type="number"] {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 200px;
+}
+
+#prodetails .single-pro-details button.n {
+    cursor: pointer;
+    background-color: #ab0520;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: 150px;
+}
+
+#prodetails .single-pro-details button.n:hover {
+    background-color: #ffbd27;
+    color: #0c234b;
+}
+
+#prodetails .star i {
+    color: #ffbd27;
+    margin-right: 4px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    #prodetails {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #prodetails .single-pro-image,
+    #prodetails .single-pro-details {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    #prodetails .single-pro-details select,
+    #prodetails .single-pro-details input[type="number"] {
+        max-width: 100%;
+    }
+
+    #prodetails .single-pro-details button.n {
+        width: 100%;
+    }
+}

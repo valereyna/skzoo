@@ -111,6 +111,7 @@ header {
 .nav-icons {
     display: flex;
     gap: 25px;
+    align-items: center;
 }
 
 .nav-icons a {
@@ -123,6 +124,64 @@ header {
 .nav-icons a:hover {
     color: #ef4056;
     font-weight: 1000;
+}
+
+.search-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    transition: width 0.4s ease, background-color 0.4s ease;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: transparent;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: white;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: black;
+    padding: 0 10px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.search-icon {
+    color: #fff;
+}
+
+.search-container:hover,
+.search-container:focus-within {
+    width: 280px;
+    background-color: white;
+}
+
+.search-container:hover .search-input,
+.search-container:focus-within .search-input {
+    opacity: 1;
+}
+
+.search-container:hover .search-btn i,
+.search-container:focus-within .search-btn i {
+    color: #ab0520; /* optional: color change on active */
 }
 
 /* Hero Section */
@@ -344,7 +403,7 @@ img {
     border-bottom-right-radius: 0;
 }
 
-#newsletter button {
+#newsletter .signup {
     cursor: pointer;
     height: 3.125rem;
     background-color: #0c234b;
@@ -360,7 +419,7 @@ img {
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-#newsletter button:hover {
+#newsletter .signup:hover {
     background-color: #ffbd27;
     color: #0c234b;
     font-weight: 800;
@@ -610,7 +669,7 @@ footer .copyright {
         margin-bottom: 10px;
     }
     
-    #newsletter button {
+    #newsletter .signup {
         width: 100%;
         border-radius: 10px;
     }
@@ -645,3 +704,5 @@ footer .copyright {
         width: 100%;
     }
 }
+
+
